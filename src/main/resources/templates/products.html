@@ -1,0 +1,10 @@
+<html xmlns:th="http://www.thymeleaf.org" lang="eng">
+<body>
+<div th:each="product : ${products}">
+  <div>
+    <h3 th:text="${product.name}"></h3>
+    <img th:src="@{/data/{id}(id=${product.id})}" style="height: 18rem; width: 26rem;">
+  </div>
+</div>
+</body>
+</html>
